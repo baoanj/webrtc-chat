@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      padding: 10px;
+    }
+    canvas {
+      border: 1px solid #999;
+    }
+    div {
+      text-align: center;
+    }
+    button {
+      font-size: 30px;
+    }
+    button + button {
+      margin-left: 40px;
+    }
+    #result {
+      font-size: 30px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <canvas id="myCanvas" width="600" height="600"></canvas>
+  </div>
+  <div>
+    <button onclick="setDir('u')">上</button>
+  </div>
+  <div>
+    <button onclick="setDir('l')">左</button>
+    <button onclick="setDir('r')">右</button>
+  </div>
+  <div>
+    <button onclick="setDir('d')">下</button>
+  </div>
+  <div id="result"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="snake.js"></script>
+</body>
+</html>
